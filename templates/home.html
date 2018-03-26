@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<div ng-controller="filteringNames">
+  <input type="text" placeholder="Enter name" ng-model="newName">
+  <input type="text" placeholder="Enter city" ng-model="newCity">
+  <button ng-click="addNewCustomer()">Add New Customer</button>
+  <br>
+  <input type="text" ng-model="name" placeholder="Search by Name or city">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Home Template</title>
-</head>
+  <div>{{name}}</div>
+  <ul>
+    <li ng-repeat="person in customers | filter:name  | orderBy:'name'">{{person.name | lowercase}} - {{person.city}}</li>
+  </ul>
 
-<body>
-  <form>
-    <input type="text" ng-model="name" placeholder="Enter name">
-
-    <div ng-controller="filteringNames">
-
-      <div>{{name}}</div>
-      <ul>
-        <li ng-repeat="person in customers | filter:name  | orderBy:'name'">{{person.name | lowercase}} - {{person.city}}</li>
-      </ul>
-
-    </div>
-  </form>
-</body>
-
-</html>
+</div>
