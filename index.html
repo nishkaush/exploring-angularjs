@@ -9,41 +9,23 @@
 </head>
 
 <body>
-  <div>Hola Nishant, Bienvenido à AngularJS</div>
+  <header>Hola Nishant, Bienvenido à AngularJS</header>
 
-  <form>
-    <input type="text" ng-model="name" placeholder="Enter name">
+  <div ng-view></div>
 
-    <div ng-controller="filteringNames">
 
-      <div>{{name}}</div>
-      <ul>
-        <li ng-repeat="person in customers | filter:name  | orderBy:'name'">{{person.name | lowercase}} - {{person.city}}</li>
-      </ul>
+  <script src="node_modules/angular.js"></script>
+  <script src="node_modules/angular-route.js"></script>
+  <script src="index.js "></script>
 
-    </div>
-  </form>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js "></script> -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
-  <script>
-    var myAppModule = angular.module("myApp", []);
-    myAppModule.controller('filteringNames', ['$scope', function ($scope) {
-      $scope.customers = [{
-          name: 'Pallav',
-          city: 'Delhi'
-        },
-        {
-          name: 'Sana',
-          city: 'Sydney'
-        },
-        {
-          name: 'Bush',
-          city: 'Washington'
-        }
-      ];
-    }]);
-  </script>
+
+
+
+
+
 </body>
 
 </html>

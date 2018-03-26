@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home Template</title>
+</head>
+
+<body>
+  <form>
+    <input type="text" ng-model="name" placeholder="Enter name">
+
+    <div ng-controller="filteringNames">
+
+      <div>{{name}}</div>
+      <ul>
+        <li ng-repeat="person in customers | filter:name  | orderBy:'name'">{{person.name | lowercase}} - {{person.city}}</li>
+      </ul>
+
+    </div>
+  </form>
+</body>
+
+</html>

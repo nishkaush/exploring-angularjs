@@ -1,0 +1,26 @@
+{
+  "name": "angularjs-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --no-browser --entry-file=index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishkaush/exploring-angularjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nishkaush/exploring-angularjs/issues"
+  },
+  "homepage": "https://github.com/nishkaush/exploring-angularjs#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.9"
+  }
+}
